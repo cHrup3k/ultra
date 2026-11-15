@@ -1,0 +1,35 @@
+Te parametry służą do wykrycia krótkich impulsów na tle szumu PDM. Część wynika z kompromisu między rozdzielczością czasu i częstotliwości, a progi detektora dobrano roboczo do tego nagrania — nie są uniwersalnymi kryteriami emisji czujnika.
+
+Dwa rozmiary okna mają różne zadania. Po dekodowaniu częstotliwość próbkowania wynosi 250 kHz:
+
+| Okno Hann | Czas okna | Odstęp binów FFT | Zastosowanie |
+|---|---:|---:|---|
+| 2048 próbek | 8,192 ms | 122 Hz | ogląd widma i stabilnych tonów |
+| 256 próbek | 1,024 ms | 977 Hz | lokalizacja krótkich burstów |
+
+Długie okno lepiej rozdziela częstotliwości, ale rozmywa impuls trwający około 0,2 ms i osłabia jego kontrast względem tła. Krótkie okno zmniejsza to rozmycie, kosztem dokładności częstotliwości. Okno Hann ogranicza przeciek widmowy. Nakładanie okien zapobiega przeoczeniu impulsu wypadającego przy ich brzegu; krok 0,256 ms nie oznacza jednak rozdzielczości czasowej 0,256 ms.
+
+Dzielenie przez medianę usuwa z obrazu kształt stałego tła. Dla każdej częstotliwości obliczyłem:
+
+\[
+R(f,t)=10\log_{10}\frac{PSD(f,t)}
+{\operatorname{mediana}_{t}PSD(f,t)}
+\]
+
+W tym zapisie tło silnie rośnie z częstotliwością. Na zwykłej skali kolorów dominuje więc jego poziom. Po normalizacji pokazujemy, o ile moc przy danej częstotliwości wzrosła względem jej typowej wartości. Mediana jest odpowiednia, bo krótkie, rzadkie impulsy niewiele ją zmieniają. Ta operacja poprawia widoczność, ale nie zwiększa fizycznego SNR ani sama nie dowodzi obecności sygnału.
+
+Pasmo 69–76 kHz wybrałem po zauważeniu zdarzeń w okolicy 73 kHz. Obejmuje ich maksimum i część szerokości widma, a ogranicza szum spoza tego obszaru. To wybór na podstawie tych samych danych, więc wynik należy traktować jako detekcję eksploracyjną.
+
+Średnia mocy przez 0,5 ms stabilizuje detektor. Zamiast reagować na pojedyncze próbki, detektor reaguje na lokalną energię. Okno jest krótkie względem odstępu między burstami, około 160 ms, więc nie łączy sąsiednich zdarzeń. Poszerza jednak impulsy — dlatego szerokości około 0,51 ms z tego detektora nie są czasem trwania emisji. Oszacowanie około 0,19 ms pochodzi z osobnej analizy obwiedni z krótszym wygładzaniem.
+
+Progi 6× i 4× są robocze:
+
+- Maksimum ponad 6× medianę mocy oznacza wzrost ponad około 7,8 dB.
+- Prominencja ponad 4× medianę wymaga dodatkowo, aby szczyt wyraźnie wystawał ponad otaczające go minima. To różnica mocy w skali liniowej, a nie osobny próg SNR.
+- Wykryte zdarzenia osiągnęły 14,5–17,4 dB ponad medianę, więc przekraczały próg wysokości z zapasem. Nie wyznaczyłem jednak prawdopodobieństwa fałszywego alarmu.
+
+Minimalny odstęp 30 ms zapobiega wielokrotnemu zliczeniu jednego zdarzenia i jego lokalnych maksimów. Nie narzuca obserwowanego okresu około 160 ms, ale mógłby ukryć dodatkowe impulsy oddalone o mniej niż 30 ms.
+
+Pominięcie skrajnych 20 ms ogranicza wpływ przejściowych efektów filtracji na początku i końcu pliku. Jest to zachowawczy margines, a nie zmierzony czas zakłócenia.
+
+Najmocniejszym argumentem za rzeczywistą serią zdarzeń jest 31 wyraźnych wzrostów energii w podobnym paśmie, powtarzających się w zbliżonych odstępach. Same ustawienia detektora nie rozstrzygają jeszcze, czy ich źródłem jest akustyczna emisja czujnika.

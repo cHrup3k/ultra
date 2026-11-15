@@ -1,0 +1,326 @@
+{
+  "source": "/home/matt/fpga/2mic/outdoor_test1/max_freq_2/ultra/mic8.pdm",
+  "sha256": "e665ea1745bcef228f8bb5f7cc3532ef3f68e4756e0a295ebe3e7e783f303f70",
+  "bytes": 1562534,
+  "pdm_fs_nominal": 2500000,
+  "pcm_fs": 250000,
+  "duration_s": 5.0001088,
+  "ones_percent": 50.02829538429244,
+  "fir_taps": 643,
+  "candidates": [],
+  "tone": {
+    "hz": 15983.747816463278,
+    "start_s": 2.160308,
+    "end_s": 3.211696,
+    "duration_s": 1.0513879999999998,
+    "amplitude_ratio_db": 41.30457470447485
+  },
+  "burst_checks": [
+    {
+      "window_ms": 1.024,
+      "bands": {
+        "20000-100000": {
+          "max_over_median_db": 6.093010222603211,
+          "p99_over_median_db": 2.9114810764849297,
+          "max_time_s": 4.736
+        },
+        "35000-45000": {
+          "max_over_median_db": 7.537030111358494,
+          "p99_over_median_db": 4.423351000992173,
+          "max_time_s": 2.083328
+        },
+        "38000-42000": {
+          "max_over_median_db": 7.619445905367925,
+          "p99_over_median_db": 5.35323704209101,
+          "max_time_s": 0.366848
+        },
+        "65000-80000": {
+          "max_over_median_db": 14.118778341124935,
+          "p99_over_median_db": 3.864974692054935,
+          "max_time_s": 4.571904
+        }
+      }
+    },
+    {
+      "window_ms": 8.192,
+      "bands": {
+        "20000-100000": {
+          "max_over_median_db": 1.7367904720572793,
+          "p99_over_median_db": 1.2026439103577549,
+          "max_time_s": 4.890624
+        },
+        "35000-45000": {
+          "max_over_median_db": 2.601264811413191,
+          "p99_over_median_db": 1.712906379317819,
+          "max_time_s": 3.459072
+        },
+        "38000-42000": {
+          "max_over_median_db": 2.907911292020813,
+          "p99_over_median_db": 2.3069916380105706,
+          "max_time_s": 2.674688
+        },
+        "65000-80000": {
+          "max_over_median_db": 5.68231893819287,
+          "p99_over_median_db": 4.521437774882283,
+          "max_time_s": 4.571136
+        }
+      }
+    }
+  ],
+  "filter_passband_error_db": 9.740100033370946e-05,
+  "filter_stopband_attenuation_db": 100.37861482789735,
+  "ultrasonic_events": [
+    {
+      "time_s": 0.096236,
+      "peak_over_background_db": 14.920630588419241,
+      "frequency_hz": 72753.90625,
+      "power_fwhm_ms": 0.516
+    },
+    {
+      "time_s": 0.249036,
+      "peak_over_background_db": 14.509916630566003,
+      "frequency_hz": 73242.1875,
+      "power_fwhm_ms": 0.532
+    },
+    {
+      "time_s": 0.411684,
+      "peak_over_background_db": 14.845513082248607,
+      "frequency_hz": 72265.625,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 0.574436,
+      "peak_over_background_db": 16.285729150526972,
+      "frequency_hz": 72753.90625,
+      "power_fwhm_ms": 0.508
+    },
+    {
+      "time_s": 0.728764,
+      "peak_over_background_db": 15.68057234181083,
+      "frequency_hz": 72265.625,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 0.893176,
+      "peak_over_background_db": 16.053810064216922,
+      "frequency_hz": 73730.46875,
+      "power_fwhm_ms": 0.508
+    },
+    {
+      "time_s": 1.05236,
+      "peak_over_background_db": 16.609632549012506,
+      "frequency_hz": 73242.1875,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 1.215628,
+      "peak_over_background_db": 16.425170801563965,
+      "frequency_hz": 73242.1875,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 1.36912,
+      "peak_over_background_db": 16.92879145442311,
+      "frequency_hz": 72753.90625,
+      "power_fwhm_ms": 0.508
+    },
+    {
+      "time_s": 1.532716,
+      "peak_over_background_db": 15.330796923150945,
+      "frequency_hz": 72753.90625,
+      "power_fwhm_ms": 0.5199999999999999
+    },
+    {
+      "time_s": 1.69516,
+      "peak_over_background_db": 16.92754886089111,
+      "frequency_hz": 71777.34375,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 1.849496,
+      "peak_over_background_db": 15.402380622546277,
+      "frequency_hz": 73730.46875,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 2.012216,
+      "peak_over_background_db": 15.207187278305705,
+      "frequency_hz": 72753.90625,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 2.1686,
+      "peak_over_background_db": 14.709638943983336,
+      "frequency_hz": 72753.90625,
+      "power_fwhm_ms": 0.516
+    },
+    {
+      "time_s": 2.333128,
+      "peak_over_background_db": 16.494117736844913,
+      "frequency_hz": 72753.90625,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 2.495856,
+      "peak_over_background_db": 14.955316000265878,
+      "frequency_hz": 73730.46875,
+      "power_fwhm_ms": 0.524
+    },
+    {
+      "time_s": 2.649028,
+      "peak_over_background_db": 16.404155709858102,
+      "frequency_hz": 71777.34375,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 2.812008,
+      "peak_over_background_db": 15.758870316927936,
+      "frequency_hz": 72753.90625,
+      "power_fwhm_ms": 0.508
+    },
+    {
+      "time_s": 2.975608,
+      "peak_over_background_db": 15.85391889166188,
+      "frequency_hz": 72265.625,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 3.13056,
+      "peak_over_background_db": 14.725433620314368,
+      "frequency_hz": 72265.625,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 3.292612,
+      "peak_over_background_db": 14.576941370343715,
+      "frequency_hz": 72753.90625,
+      "power_fwhm_ms": 0.5199999999999999
+    },
+    {
+      "time_s": 3.449448,
+      "peak_over_background_db": 16.66237450257078,
+      "frequency_hz": 72753.90625,
+      "power_fwhm_ms": 0.508
+    },
+    {
+      "time_s": 3.615316,
+      "peak_over_background_db": 15.85539199966535,
+      "frequency_hz": 73242.1875,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 3.7718,
+      "peak_over_background_db": 15.210645442424768,
+      "frequency_hz": 73730.46875,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 3.931824,
+      "peak_over_background_db": 16.586342458575906,
+      "frequency_hz": 73730.46875,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 4.088896,
+      "peak_over_background_db": 16.599508478208246,
+      "frequency_hz": 72265.625,
+      "power_fwhm_ms": 0.508
+    },
+    {
+      "time_s": 4.254276,
+      "peak_over_background_db": 16.23347164559183,
+      "frequency_hz": 73242.1875,
+      "power_fwhm_ms": 0.516
+    },
+    {
+      "time_s": 4.416132,
+      "peak_over_background_db": 16.94708857713724,
+      "frequency_hz": 72265.625,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 4.571952,
+      "peak_over_background_db": 17.25684854218846,
+      "frequency_hz": 72265.625,
+      "power_fwhm_ms": 0.508
+    },
+    {
+      "time_s": 4.736148,
+      "peak_over_background_db": 17.35284812995409,
+      "frequency_hz": 72753.90625,
+      "power_fwhm_ms": 0.512
+    },
+    {
+      "time_s": 4.89022,
+      "peak_over_background_db": 16.174732190294478,
+      "frequency_hz": 72265.625,
+      "power_fwhm_ms": 0.5199999999999999
+    }
+  ],
+  "event_interval_s": [
+    0.1528,
+    0.162648,
+    0.16275199999999995,
+    0.15432800000000002,
+    0.164412,
+    0.159184,
+    0.16326799999999997,
+    0.15349199999999996,
+    0.16359600000000007,
+    0.16244400000000003,
+    0.15433600000000003,
+    0.16271999999999998,
+    0.15638400000000008,
+    0.16452799999999979,
+    0.16272799999999998,
+    0.15317200000000009,
+    0.16298000000000012,
+    0.16359999999999975,
+    0.1549520000000002,
+    0.16205200000000008,
+    0.15683599999999975,
+    0.16586800000000013,
+    0.15648399999999985,
+    0.1600240000000004,
+    0.15707199999999988,
+    0.16537999999999986,
+    0.16185600000000022,
+    0.1558199999999994,
+    0.16419600000000045,
+    0.1540720000000002
+  ],
+  "fine_event_power_fwhm_ms": [
+    0.196,
+    0.2,
+    0.16799999999999998,
+    0.12000000000000001,
+    0.224,
+    0.188,
+    0.124,
+    0.264,
+    0.16,
+    0.156,
+    0.16799999999999998,
+    0.16799999999999998,
+    0.12000000000000001,
+    0.156,
+    0.204,
+    0.22,
+    0.196,
+    0.196,
+    0.18000000000000002,
+    0.192,
+    0.124,
+    0.27999999999999997,
+    0.232,
+    0.184,
+    0.12000000000000001,
+    0.17200000000000001,
+    0.25999999999999995,
+    0.208,
+    0.148,
+    0.212,
+    0.256
+  ],
+  "mean_event_spectrum_peak_hz": 72875.9765625
+}
